@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css2</title>
+    <style>
+        /* 
+                元素选择器
+                p{} h1{} div{}
+
+                id选择器
+                #box2{}
+
+                类选择器
+                .class{}
+
+                通配选择器
+                *{}
+
+                # # 复合选择器
+                交集选择器      有元素选择器，必须元素选择器开头
+                div.brown{}
+                .a.b.c{}
+
+                并集选择器
+                h1,span{}
+
+                关系选择器
+                父元素 
+                子元素 div.box>span{} div>p>span{}
+                祖先元素
+                后代元素 div span{}
+                兄弟元素 p+span{}   紧挨着的下一个
+                        p~span{}   后面所有兄弟
+
+
+                div > span{}
+
+        */
+
+
+
+        .brown {
+            color: brown;
+        }
+
+        .size {
+            font-size: 20px;
+        }
+
+        div.brown {
+            font-size: 30px;
+        }
+
+        h1,
+        .aa {
+            color: darkcyan;
+        }
+
+        div>span{  
+            color: red;
+            font-size: 20px;
+        }
+        p+span{
+            color: springgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <p>abcdefghijklmn</p>
+    <p class="brown size">abcdefghijklmn</p>
+    <div class="brown">abcdefghijklmn</div>
+    <p>abcdefghijklmn</p>
+    <p>abcdefghijklmn</p>
+    <h1>asdssad</h1>
+    <span>sadsad</span>
+
+    <div>
+        div
+        <p>div中的p
+            <span>p中的span</span>
+        </p>
+        <span>div中的span</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css2</title>
+    <style>
+        /* 
+              属性选择器
+              [title] 
+              [title=bbb] 
+              [title^=aa]  开头
+              [title$=aa]  结尾
+              [title*=aa]  含有
+
+        */
+        p[title=bbb] {
+            color: teal;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p title="aaa">abcdefghijklmn</p>
+    <p title="bbb">abcdefghijklmn</p>
+    <div title="ccc">abcdefghijklmn</div>
+    <p title="aacccaa">abcdefghijklmn</p>
+    <p>abcdefghijklmn</p>
+    <h1>asdssad</h1>
+    <span>sadsad</span>
+
+
+</body>
+
+</html>
