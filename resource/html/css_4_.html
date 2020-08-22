@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css4</title>
+    <style>
+        /* 
+            样式的继承  # 适用于通用元素的使用
+            为一个元素设置样式 其后代都会继承
+
+            背景 布局等不会被继承
+        */
+        .aa{
+            font-size: 50px;
+            color: red;
+        }
+        /* 
+            样式的冲突
+            
+            选择器的权重 
+                内联元素        1,0,0,0
+                id选择器        0,1,0,0
+                类和伪类选择器   0,0,1,0
+                元素选择器       0,0,0,1
+                继承的样式      没有优先级
+
+                权重相加计算
+
+                    #box1 = 100
+                    div#box1 = 101
+
+                分组是单独计算
+                    div,p,span
+            权重同级 如果是 优先使用靠下的样式
+
+            可以在样式后面添加  !important 获取最高权重  ##慎用
+
+        */
+        .bb{
+            color: cadetblue;
+        }
+        #box{
+            color: crimson;
+        }
+  
+    </style>
+</head>
+
+<body>
+
+    <div class="aa">
+        <p>232134fdgfd</p>
+        <span>sadsa</span>
+    </div>
+    
+    <div id="box" class="bb">lalalalla</div>
+
+</body>
+
+</html>

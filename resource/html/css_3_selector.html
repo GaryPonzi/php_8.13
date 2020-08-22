@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>css2</title>
+    <title>css3</title>
     <style>
         /* 
               属性选择器
@@ -18,10 +18,90 @@
             color: teal;
             font-size: 50px;
         }
+        /* 
+            伪类选择器
+
+            子元素
+            :first-child
+            :last-child
+            :nth-child(x)  选择第x个
+                    2x    |  even  偶数
+                    2x+1  |  odd   基数
+
+            兄弟元素
+            :first-of-type
+            :last-of-type
+            :nth-of-type()
+
+            否定
+            :not() 
+         */
+        ul > li:first-child{
+            color: red;
+        }
+
+        ul > li:not(:nth-of-type(3)){
+            background-color: blueviolet;
+        }
+
+        /* 
+            正常链接
+            :link 
+            已访问
+            :visited
+            鼠标移入
+            :hover
+        */
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: green;
+        }
+        li:hover{
+            font-size: 50px;
+
+        }
+
+        /* 
+        伪元素 
+        ::first-letter  第一个字母
+        
+        */
+
+        .str::first-letter{
+            font-size: 50px;
+        }
+        .str::first-line{
+            color: lightseagreen;
+        }
+        /* 选中 */
+        .str::selection{        
+            color: mediumblue;
+        }
+
+        .str::before{
+            content: '{j';
+            background-color:red;
+        }
+        .str::after{
+            content: '}';
+            background-color:red;
+        }
+  
     </style>
 </head>
 
 <body>
+
+    
+    <a href="https://image.baidu.com/">链接1</a>
+    <br>
+    <a href="https://image.baidu.com/">链接2</a>
+
+
+
+
     <p title="aaa">abcdefghijklmn</p>
     <p title="bbb">abcdefghijklmn</p>
     <div title="ccc">abcdefghijklmn</div>
@@ -29,6 +109,16 @@
     <p>abcdefghijklmn</p>
     <h1>asdssad</h1>
     <span>sadsad</span>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <p class='str'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quo voluptas dolore quas voluptatum, facilis sunt quaerat, consectetur maiores veritatis libero modi sint eligendi laudantium? Dignissimos magnam temporibus architecto deserunt.</p>
 
 
 </body>
