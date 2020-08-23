@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_2</title>
+    <style>
+        .box1 {
+
+            /* 内容区(content) */
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+            /* 边框(border) */
+            border-width: 10px;
+            border-color: red;
+            border-style: solid;
+        }
+
+
+        .box2 {
+
+            /* 内容区(content) */
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            /* 边框(border) */
+            /* 上 右 下 左 | 上 左右 下 | 上下 左右*/
+            border-width: 10px 20px 25px 3px;
+            border-color: orange;
+            border-style: solid;
+
+            /* 外边距 */
+            margin-top :50px
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: forestgreen;
+            border: red 5px solid;
+            /*
+                内边距
+            */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .box4 {
+            width: 100%;
+            height: 100%;
+            background-color: indianred;
+        }
+
+
+        /*
+            盒子大小
+                = 内容区 + 内边距 + 边框
+         */
+    </style>
+</head>
+
+<body>
+    <!--
+        盒子模型
+            css所有的元素都是一个矩形的盒子
+            每一个盒子都由以下几个部分组成
+                内容区 content
+                内边距 padding
+                边框   border
+                外边距 margin 
+        
+    -->
+
+    <div class="box1">aaa</div>
+    <div class="box2">bbb</div>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_4</title>
+    <style>
+        .box1,.box2{
+            width: 200px;
+            height: 200px;
+        }
+
+    
+
+        /* 
+            垂直外边距的折叠 
+                - 相邻的垂直方向外边距会发生重叠现象
+                - 兄弟元素
+                    垂直就取大值 都是正值       
+
+                - 父子元素 
+                    父子元素外边距，子元素会传递给父元素
+                    1.要么不用margin 2.要么加border
+        
+        */
+
+        .box1{
+            background-color:sienna;
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: seagreen;
+            margin-top: 100px;
+        }
+        .box3{
+            /* padding-top: 100px; */
+            width: 200px;
+            height: 200px; 
+            /* height: 100px;  */
+            background-color:red;
+            /* border-top:1px blue solid */
+         
+        }
+        .box4{
+            /* margin-top: 100px; */
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+    
+
+</body>
+
+</html>

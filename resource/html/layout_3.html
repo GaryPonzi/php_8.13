@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_3</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 200px;
+            border: 10px red solid
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background: royalblue;
+            margin: 0 auto;
+            /* 
+                水平方向的布局 
+                    margin-left
+                    border-left
+                    width
+                    padding-right
+                    border-right
+                    margin-right
+
+                必须满足 : m-l + b-l + width + p-r + b-r + m-r = 其父元素内容区宽度
+                0 + 0 + 200 + 0 + 0 + 0
+                默认必须相等 都是0 没有auto 浏览器会自动调整 m-r 
+                有3个值可以设置成auto
+                    with
+                    m-l
+                    m-r    
+                如果将一个宽度和一个外边距设置为auto,则宽度会调整到最大
+                如果将三个值都设置为auto,则外边距都是0,宽度最大    
+                如果将两个外边距设置为auto,宽度固定,外边距则是相同的值
+                    ##  常用来水平居中
+            */
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: saddlebrown;
+        }
+
+        /* 
+            溢出
+            overflow: hidden;   隐藏
+            overflow: scroll;   滚动条
+            overflow: auto;     自动滚动条
+
+
+            overflow-x: 
+            overflow-y: 
+        */
+
+        .box2 {
+            width: 100px;
+            height: 400px;
+            background-color: seagreen;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+
+    <div class='box1'>
+        <div class='box2'></div>
+    </div>
+
+
+</body>
+
+</html>
