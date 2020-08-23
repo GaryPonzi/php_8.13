@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_5</title>
+    <style>
+        /* 
+
+            行内元素不支持设置宽度和高度
+            行内元素可以设置padding，但是垂直方向的padding不会影响布局
+
+        */
+
+        .s1 {
+            background-color: yellow;
+            /* padding: 100px; */
+            /* border: 100px red solid; */
+            margin: 100px;
+        }
+
+        .box1 {
+            height: 200px;
+            width: 200px;
+            background-color: teal;
+        }
+        /* 
+            display 
+                inline              转行内元素
+                block               转块元素
+                inline block        转行内块元素
+                table               表格
+                none                删除元素
+                visibility:         hidden;隐藏元素
+
+        */
+        a{
+            
+            display: block;
+            width: 200px;            
+            height: 200px;
+            background-color:chocolate;     
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:;">a标签</a>
+    <span class="s1">我是span</span>
+    <span class="s1">我是span</span>
+    <div class="box1"></span>
+   
+
+
+
+</body>
+
+</html>
