@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_7</title>
+    <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            border: 10px red solid;
+            /*
+                box-sizing
+                     content-box 默认值，用高和宽来设置内容区大小
+                     border-box  高和宽来设置整个盒子的大小   
+            */
+
+
+            box-sizing: content-box;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* border: 10px red solid; */
+            /* 
+                轮廓线 不挤出
+                outline: 10px red solid; 
+            
+            */
+            /* 
+                阴影
+                box-shadow: 10px 10px 50px black; 
+                圆角
+                border-radius
+            */
+
+        }
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            float: left;
+            /* 
+                float 
+                    none
+                    left
+                    right
+                元素从文档流中脱离 自动向上移动
+                    1.块元素脱离 不再独占一行
+                    2.块元素宽、高只由内容设置
+                    3.行内元素变成块元素
+
+
+                浮动元素不会覆盖文字
+            */
+        }
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            float: left;
+        }
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            float: left;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <div class="box1"></div> -->
+    <!-- <div class="box2"></div>
+    <span>hello</span> -->
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+
+</body>
+
+</html>

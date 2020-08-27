@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_10</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            position: relative;
+        }
+        
+       
+      
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        /*
+            水平布局
+            left + m-l + b-l + width + p-r + b-r + m-r + right = 其包含块的内容区的宽度
+        
+            当我们开启绝对定位以后
+
+                水平方向的布局 需要添加 left 和 right 两个值
+                    如果发生过度约束
+                        9个值中没有 auto 则自动调整 right值以是等式满足
+                        如果有auto 则设置auto
+                            margin width left right
+                
+                水平方向的布局
+                    top + m-t/m-b + p-t/p-b + b-t/b-b + height = 包含块的高度
+        */
+
+
+       
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+
+</body>
+
+</html>

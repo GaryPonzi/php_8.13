@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout_8</title>
+    <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+
+    <style>
+        .outer {
+            /* 
+                BFC 块级格式化区域
+                
+                变成独立的布局区域
+
+                1.不会被浮动元素覆盖
+                2.子元素和父元素的外边距不会重叠
+                3.可以包含浮动的子元素
+
+  
+                float
+                display：inline-block
+                overflow：hidden
+            */
+
+            border: 10px red solid;
+            overflow: hidden;
+            /* float: left; */
+            
+        }
+        .inner {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /*
+                高度塌陷
+                    在浮动布局中，父元素的高度默认是被子元素撑开的
+                    当子元素浮动后，其会完全脱离文档流，子元素从文档流中脱离
+                    父元素高度塌陷
+            */
+        }
+         
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: slateblue;
+            float: left;
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            background-color:springgreen;
+            float: right;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color:slategrey;
+            /*
+                clear
+                清除浮动的影响  
+                    right
+                    left
+                    both        清除较大的  
+            */
+
+            clear: right;
+        }
+
+
+        .box4{
+            border: 10px red solid;
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            float: left;
+        }
+        /* .box6{
+            clear: both;
+        } */
+        /* 使用伪类解决高度塌陷问题 */
+        .box4::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+    
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div> -->
+
+    <div class="box4">
+        <div class="box5"></div>
+        <!-- 借html解决css问题 -->
+        <!-- <div class="box6">aaa</div> -->
+    </div>
+
+
+
+
+</body>
+
+</html>

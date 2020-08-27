@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>practice_5</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container {
+            width: 590px;
+            height: 470px;
+            background-color: gray;
+            margin: 0px auto;
+            position: relative;
+        }
+
+        .points {
+            position: absolute;
+            top: 450px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .point {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            float: left;
+            margin-left: 5px;
+            border: 2px white solid;
+        }
+        .points .active,
+        .point:hover{
+            background-color: white;
+        }
+        .img-box {
+            position: absolute;
+        }
+
+        .img-boxs div:nth-child(1) {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-boxs">
+            <div class="img-box">
+                <a href="javascript::">
+                    <img src="../img/1.jpg">
+                </a>
+            </div>
+            <div class="img-box">
+                <a href="javascript::">
+                    <img src="../img/2.jpg">
+                </a>
+            </div>
+            <div class="img-box">
+                <a href="javascript::">
+                    <img src="../img/3.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="points">
+            <div class="point active"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
